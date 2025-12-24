@@ -2,13 +2,19 @@
 
 **shopping like prompting!** Build an auditable, tool-driven multi-agent system that turns a user’s *purchase mission* into an executable **Draft Order** (without capturing payment), backed by **strong facts** (pricing/stock/shipping/tax/compliance/policies) obtained only via tools and **evidence snapshots** that can be replayed for cross-border disputes.
 
+## Contents
+- [Docs (Chinese)](#docs-chinese)
+- [Architecture (Truth / Reasoning / Acting)](#architecture-truth--reasoning--acting)
+- [Repository conventions](#repository-conventions)
+- [中文](#中文)
+
 ## Why this repo
 - **No guessing on tradable facts**: price/stock/shipping/tax/compliance/policies must come from structured sources or real-time tools.
 - **Auditable by design**: every key decision is attached to an Evidence Snapshot (tool outputs + ruleset versions + citations).
 - **RAG is evidence, not truth**: manuals/QA/review insights are retrieved with citations; they never override tool-verified truth.
 
 ## Docs (Chinese)
-- Start here: `doc/README.md`
+- Start here: [`doc/README.md`](doc/README.md)
 
 ## Architecture (Truth / Reasoning / Acting)
 ```mermaid
@@ -49,7 +55,7 @@ flowchart TB
 
 ---
 
-# Multi-AI-Agent4OnlineShopping（中文）
+## 中文
 
 **shopping like prompting!** 目标是构建一个可工程落地的“委托式采购（Delegated Buying）”平台：AI 把用户的采购委托转成**可执行草稿订单（Draft Order）**（不扣款），并通过**工具调用**获得价格/库存/物流/税费/合规/条款等**强事实**，同时全链路**可审计回放（Evidence Snapshot）**，支撑跨境纠纷仲裁。
 
@@ -59,6 +65,6 @@ flowchart TB
 - **RAG 只做证据补全**：说明书/QA/评价洞察必须带引用，且不替代强事实。
 
 ## 文档（中文）
-- 从这里开始：`doc/README.md`
+- 从这里开始：[`doc/README.md`](doc/README.md)
 
 

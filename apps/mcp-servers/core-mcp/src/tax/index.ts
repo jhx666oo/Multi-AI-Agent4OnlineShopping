@@ -45,9 +45,7 @@ export const taxTools: Tool[] = [
 ];
 
 export function handleTaxTool(tool: string) {
-  return async (params: unknown): Promise<unknown> => {
-    const p = params as Record<string, unknown>;
-
+  return async (_params: unknown): Promise<unknown> => {
     switch (tool) {
       case 'estimate_duties_and_taxes':
         return {

@@ -29,9 +29,7 @@ export const complianceTools: Tool[] = [
 ];
 
 export function handleComplianceTool(tool: string) {
-  return async (params: unknown): Promise<unknown> => {
-    const p = params as Record<string, unknown>;
-
+  return async (_params: unknown): Promise<unknown> => {
     switch (tool) {
       case 'check_item':
         // TODO: Implement actual compliance checking

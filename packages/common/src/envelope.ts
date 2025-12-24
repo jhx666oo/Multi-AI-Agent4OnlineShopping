@@ -106,13 +106,18 @@ export function createSuccessResponse<T>(
     warnings?: string[];
   }
 ): ResponseEnvelope<T> {
-  return {
+  const result: ResponseEnvelope<T> = {
     ok: true,
     data,
     warnings: options?.warnings ?? [],
-    ttl_seconds: options?.ttl_seconds,
-    evidence: options?.evidence,
   };
+  if (options?.ttl_seconds !== undefined) {
+    result.ttl_seconds = options.ttl_seconds;
+  }
+  if (options?.evidence !== undefined) {
+    result.evidence = options.evidence;
+  }
+  return result;
 }
 
 export function createErrorResponse(
@@ -120,14 +125,17 @@ export function createErrorResponse(
   message: string,
   details?: Record<string, unknown>
 ): ResponseEnvelope<never> {
-  return {
+  const result: ResponseEnvelope<never> = {
     ok: false,
     warnings: [],
     error: {
       code,
       message,
-      details,
     },
   };
+  if (details !== undefined) {
+    result.error!.details = details;
+  }
+  return result;
 }
 

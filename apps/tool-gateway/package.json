@@ -14,24 +14,24 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@shopping-agent/common": "workspace:*",
-    "fastify": "^4.25.0",
     "@fastify/cors": "^8.4.0",
     "@fastify/helmet": "^11.1.0",
     "@fastify/rate-limit": "^9.1.0",
-    "zod": "^3.22.0",
-    "pino": "^8.17.0",
     "@opentelemetry/api": "^1.7.0",
-    "@opentelemetry/sdk-node": "^0.45.0",
     "@opentelemetry/exporter-trace-otlp-http": "^0.45.0",
-    "dotenv": "^16.3.0"
+    "@opentelemetry/sdk-node": "^0.45.0",
+    "@shopping-agent/common": "workspace:*",
+    "dotenv": "^16.3.0",
+    "fastify": "^4.25.0",
+    "fastify-plugin": "^5.1.0",
+    "pino": "^8.17.0",
+    "zod": "^3.22.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
-    "typescript": "^5.3.0",
-    "tsx": "^4.6.0",
     "rimraf": "^5.0.5",
+    "tsx": "^4.6.0",
+    "typescript": "^5.3.0",
     "vitest": "^1.0.0"
   }
 }
-
